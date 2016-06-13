@@ -11,15 +11,15 @@ let list = [],
     rowIndex = -1,
     cellIndex = -1,    
     attr = '',
-    attrs = ['date', 'airLines', 'flight', 'from', 'schedule_departure_time', 'real_departure_time', 'schedule_arrival_time', 'real_arrival_time', 'remark'];
-    
-var parser = new htmlparser.Parser({
+    attrs = ['date', 'air_lines', 'flight', 'from', 'schedule_departure_time', 'real_departure_time', 'schedule_arrival_time', 'real_arrival_time', 'remark'];
+
+let parser = new htmlparser.Parser({
     onopentag: function(tagname, attribs){
         if(tagname === "tr") {
             if( rowIndex > -1 ) {
                 list.push({
                     date: '',
-                    airLines: '',
+                    air_lines: '',
                     flight: '',
                     from: '',
                     schedule_departure_time: '',
@@ -49,7 +49,6 @@ var parser = new htmlparser.Parser({
             rowIndex ++;
         }
     }
-
 }, {decodeEntities: true});
 
 request(header, (error, response, body) => {
