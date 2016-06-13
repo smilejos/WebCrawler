@@ -1,0 +1,16 @@
+{
+  "name": "WebCrawler",
+  "version": "1.0.0",
+  "description": "AirPort Crawler Sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Crawler",
+    "HTML",
+    "Node.js"
+  ],
+  "author": "Jos Tung",
+  "license": "ISC"
+}
